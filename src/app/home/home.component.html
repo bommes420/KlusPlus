@@ -1,0 +1,31 @@
+<div class="greeting__container">
+  <div class="greeting">
+    <h1>Welkom bij klusplus <img class="icon" src="../../assets/hamer.png"> </h1>
+  </div>
+  <button routerLink='/request-reparation' routerLinkActive="active" id="Reparation" mat-raised-button>Reparatie aanvragen</button><br><br>
+  <button (click) = toggleDisplay() id="Active" mat-raised-button>Actieve reparaties</button>
+  <br>
+  <div *ngIf = !isShow>
+    <div class="activereparations__container">
+      <div class="activereparations">
+        <h1>Actieve reparaties</h1>
+        <div class="reparationbox">
+          <div *ngFor="let appointment of appointments; index as appointmentTitle">
+            <div id="ActiveReparationTile">
+              <h3>
+                {{appointment.id}}
+              </h3>
+              <h4>
+                {{appointment.description}}
+              </h4>
+              <mat-button-toggle>
+                <a class="DetailsButton" [title]="appointment.title" [routerLink]="['/details', appointmentTitle]">Details afspraak</a>
+              </mat-button-toggle>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
