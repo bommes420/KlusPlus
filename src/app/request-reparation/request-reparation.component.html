@@ -1,0 +1,20 @@
+<div class="RequestReparationContainer">
+  <h1 id="IntroGreet">Reparatie Aanvragen</h1>
+  <br>
+  <br>
+
+  <div class="FormParent">
+  <mat-form-field class="CategoryPicker">
+    <mat-label>Kies Categorie</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option value="Ramen en Deuren">Ramen & Deuren</mat-option>
+      <mat-option value="Sanitair">Sanitair</mat-option>
+      <mat-option value="Verwarming">Verwarming</mat-option>
+      <mat-option value="Voorzieningen">Voorzieningen</mat-option>
+      <mat-option value="Keuken">Keuken</mat-option>
+    </mat-select>
+  </mat-form-field>
+    <p>Uw probleem valt in de categorie: {{selected}}</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.RequestReparationContainer{
+  border: 1px solid black;
+  & #IntroGreet{
+    text-align: center;
+  }
+}
+
+.FormParent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
