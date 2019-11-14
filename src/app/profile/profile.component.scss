@@ -1,0 +1,26 @@
+#Hoofdmenu{
+  border-radius: 25px;
+}
+
+.span{
+  margin: auto;
+}
+
+.profilepicture{
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 50%;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
+  display: block;
+}
+
+.details{
+  text-align: center;
+}
+
+.customerdata{
+  text-align: center;
+}

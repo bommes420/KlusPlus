@@ -1,8 +1,10 @@
 <div class="greeting__container">
-  <div class="greeting">
+  <img routerLink="/profile" routerLinkActive="active" class="profilepicdefault" src="../../assets/small_default_profile.png" mat-card-image>
+    <div class="greeting">
     <h1>Welkom bij klusplus <img class="icon" src="../../assets/hamer.png"> </h1>
   </div>
-  <button routerLink='/request-reparation' routerLinkActive="active" id="Reparation" mat-raised-button>Reparatie aanvragen</button><br><br>
+  <button routerLink='/request-reparation' routerLinkActive="active" id="Reparation" mat-raised-button>Reparatie aanvragen</button><br>
+  <button routerLink='/do-it-yourself' routerLinkActive="active" id="DIY" mat-raised-button>Doe-het-zelftips</button><br>
   <button (click) = toggleDisplay() id="Active" mat-raised-button>Actieve reparaties</button>
   <br>
   <div *ngIf = !isShow>

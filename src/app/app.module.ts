@@ -10,7 +10,7 @@ import { MatMenuModule} from '@angular/material/menu';
 import {
   MatButtonModule,
   MatButtonToggleModule, MatCardModule,
-  MatCheckboxModule,
+  MatCheckboxModule, MatExpansionModule,
   MatInputModule,
   MatRadioModule,
   MatSelectModule, MatToolbarModule
@@ -20,6 +20,8 @@ import { AppointmentDetailsComponent } from './appointment-details/appointment-d
 
 import { HomeComponent } from './home/home.component';
 import { RequestReparationComponent } from './request-reparation/request-reparation.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DoItYourselfComponent } from './do-it-yourself/do-it-yourself.component';
 
 // const appRoutes: Routes = [
 //   {path: 'File-request', component: 'appointmentsComponent'}
@@ -31,7 +33,9 @@ import { RequestReparationComponent } from './request-reparation/request-reparat
     AppointmentsComponent,
     AppointmentDetailsComponent,
     HomeComponent,
-    RequestReparationComponent
+    RequestReparationComponent,
+    ProfileComponent,
+    DoItYourselfComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,8 @@ import { RequestReparationComponent } from './request-reparation/request-reparat
     MatRadioModule,
     MatCheckboxModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
