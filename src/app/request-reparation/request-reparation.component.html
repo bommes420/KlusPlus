@@ -1,4 +1,4 @@
-  <button id="Hoofdmenu" routerLink='' routerLinkActive="active">Terug</button>
+  <button id="MainMenu" routerLink='' routerLinkActive="active">Terug</button>
   <mat-toolbar>
     <mat-toolbar-row>
       <span class="span">Reparatie aanvragen</span>
@@ -21,20 +21,20 @@
   </mat-form-field>
     <p>Uw probleem valt in de categorie: {{selected}}</p>
     <mat-form-field>
-      <input name="TitelTicket" matInput type="text" placeholder="Titel Ticket"><br>
+      <input name="TitleTicket" matInput type="text" placeholder="Titel Ticket"><br>
     </mat-form-field><br>
     <mat-form-field>
-      <input name="AdresTicket" matInput type="text" placeholder="Adres"><br>
+      <input name="AddressTicket" matInput type="text" placeholder="Adres"><br>
     </mat-form-field><br>
     <mat-form-field>
-      <textarea matInput name="OmschrijvingProbleem" placeholder="Omschrijving probleem"></textarea><br>
+      <textarea matInput name="ProblemDescription" placeholder="Omschrijving probleem"></textarea><br>
     </mat-form-field><br>
     <mat-checkbox>Spoed?</mat-checkbox><br>
-      <div class="Overzicht"><br>
+      <div class="Overview"><br>
         <b>Overzicht:</b>
         <p>Categorie: <br> {{selected}}</p>
         <p>€0,00</p>
-          <button class="Bevestig" type="submit">Bevestig</button>
+          <button class="Confirm" type="submit">Bevestig</button>
       </div>
     </div>
 </mat-card>

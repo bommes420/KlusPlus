@@ -15,9 +15,7 @@ import {
   MatRadioModule,
   MatSelectModule, MatToolbarModule
 } from '@angular/material';
-import { AppointmentsComponent } from './appointments/appointments.component';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
-
 import { HomeComponent } from './home/home.component';
 import { RequestReparationComponent } from './request-reparation/request-reparation.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -30,7 +28,6 @@ import { DoItYourselfComponent } from './do-it-yourself/do-it-yourself.component
 @NgModule({
   declarations: [
     AppComponent,
-    AppointmentsComponent,
     AppointmentDetailsComponent,
     HomeComponent,
     RequestReparationComponent,
