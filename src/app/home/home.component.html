@@ -8,12 +8,15 @@
   <div *ngIf = !isShow>
     <div class="activereparations__container">
       <div class="activereparations">
-        <h1>Actieve reparaties</h1>
-        <div class="reparationbox">
+        <mat-toolbar>
+          <mat-toolbar-row>
+          <span class="span">Actieve reparaties</span>
+          </mat-toolbar-row>
+        </mat-toolbar>
           <div *ngFor="let appointment of appointments; index as appointmentTitle">
-            <div id="ActiveReparationTile">
+            <mat-card id="ActiveReparationTile">
               <h3>
-                {{appointment.id}}
+                {{appointment.title}}
               </h3>
               <h4>
                 {{appointment.description}}
@@ -21,11 +24,28 @@
               <mat-button-toggle>
                 <a class="DetailsButton" [title]="appointment.title" [routerLink]="['/details', appointmentTitle]">Details afspraak</a>
               </mat-button-toggle>
-            </div>
+            </mat-card>
             <br>
           </div>
-        </div>
       </div>
     </div>
+    <div class="closedreparations">
+      <mat-toolbar>
+        <mat-toolbar-row>
+        <span class="span">Afgesloten reparaties</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    <div *ngFor="let appointment of closedappointments">
+      <mat-card id="ClosedReparationTile">
+        <h3>
+          {{appointment.title}}
+        </h3>
+        <h4>
+          {{appointment.description}}
+        </h4>
+      </mat-card>
+      <br>
+    </div>
   </div>
-</div>
+  </div>
+  </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {appointments} from '../appointments';
+import {closedappointments} from '../appointments';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import {appointments} from '../appointments';
 export class HomeComponent implements OnInit {
   isShow = false;
   appointments = appointments;
-
+  closedappointments = closedappointments;
   toggleDisplay() {
     this.isShow = !this.isShow;
   }

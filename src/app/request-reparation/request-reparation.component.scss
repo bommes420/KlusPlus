@@ -1,13 +1,9 @@
-.RequestReparationContainer{
-  border: 1px solid black;
-  & #IntroGreet{
-    text-align: center;
-  }
+#Hoofdmenu{
+  border-radius: 25px;
 }
 
-.FormParent{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.Bevestig{
+  border-radius: 25px;
+  color: black;
+  display: block;
 }

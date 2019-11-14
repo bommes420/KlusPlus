@@ -1,9 +1,12 @@
-<h2>Details van klus:</h2>
+<button id="Hoofdmenu" routerLink='' routerLinkActive="active">Terug</button>
+<mat-toolbar>
+<span>Details van klus:</span>
+</mat-toolbar>
 <h2>{{ appointment.title }}</h2>
-<div id="outline">
+<mat-card id="outline">
 <div *ngIf="appointment">
   <h2>Omschrijving:</h2>
   <h4>{{ appointment.description }}</h4>
   <p>{{ appointment.status }}</p>
 </div>
-</div>
+</mat-card>

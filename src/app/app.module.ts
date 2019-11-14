@@ -7,7 +7,14 @@ import { AppComponent } from './app.component';
 import {MatIconModule} from '@angular/material/icon';
 import { MatMenuModule} from '@angular/material/menu';
 
-import {MatButtonModule, MatButtonToggleModule, MatInputModule, MatSelectModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatButtonToggleModule, MatCardModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatRadioModule,
+  MatSelectModule, MatToolbarModule
+} from '@angular/material';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
 
@@ -35,7 +42,11 @@ import { RequestReparationComponent } from './request-reparation/request-reparat
     MatMenuModule,
     MatButtonToggleModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

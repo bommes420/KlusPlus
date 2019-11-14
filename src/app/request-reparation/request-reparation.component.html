@@ -1,4 +1,5 @@
-<div class="RequestReparationContainer">
+<mat-card class="Outline">
+  <button id="Hoofdmenu" routerLink='' routerLinkActive="active">Terug</button>
   <h1 id="IntroGreet">Reparatie Aanvragen</h1>
   <br>
   <br>
@@ -6,7 +7,7 @@
   <div class="FormParent">
   <mat-form-field class="CategoryPicker">
     <mat-label>Kies Categorie</mat-label>
-    <mat-select [(value)]="selected">
+    <mat-select [(value)]="selected" required>
       <mat-option>None</mat-option>
       <mat-option value="Ramen en Deuren">Ramen & Deuren</mat-option>
       <mat-option value="Sanitair">Sanitair</mat-option>
@@ -16,5 +17,21 @@
     </mat-select>
   </mat-form-field>
     <p>Uw probleem valt in de categorie: {{selected}}</p>
-  </div>
-</div>
+    <mat-form-field>
+      <input name="TitelTicket" matInput type="text" placeholder="Titel Ticket"><br>
+    </mat-form-field><br>
+    <mat-form-field>
+      <input name="AdresTicket" matInput type="text" placeholder="Adres"><br>
+    </mat-form-field><br>
+    <mat-form-field>
+      <textarea matInput name="OmschrijvingProbleem" placeholder="Omschrijving probleem"></textarea><br>
+    </mat-form-field><br>
+    <mat-checkbox>Spoed?</mat-checkbox><br>
+      <div class="Overzicht"><br>
+        <b>Overzicht:</b>
+        <p>Categorie: <br> {{selected}}</p>
+        <p>€0,00</p>
+          <button class="Bevestig" type="submit">Bevestig</button>
+      </div>
+    </div>
+</mat-card>
