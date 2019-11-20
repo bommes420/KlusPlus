@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class RequestReparationComponent implements OnInit {
   selected = 'N/A';
   constructor() {}
-
   ngOnInit() {}
 
 }

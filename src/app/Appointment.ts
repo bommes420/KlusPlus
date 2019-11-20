@@ -3,4 +3,5 @@ export class Appointment {
   title: string;
   description: string;
   status: string;
+  open: boolean;
 }

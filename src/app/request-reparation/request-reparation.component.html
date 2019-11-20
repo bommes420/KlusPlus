@@ -21,20 +21,28 @@
   </mat-form-field>
     <p>Uw probleem valt in de categorie: {{selected}}</p>
     <mat-form-field>
-      <input name="TitleTicket" matInput type="text" placeholder="Titel Ticket"><br>
+      <input #titleticket (keyup)="0" name="TitleTicket" matInput type="text" placeholder="Titel Ticket"><br>
     </mat-form-field><br>
     <mat-form-field>
-      <input name="AddressTicket" matInput type="text" placeholder="Adres"><br>
+      <input #addressticket name="AddressTicket" matInput type="text" placeholder="Adres"><br>
     </mat-form-field><br>
     <mat-form-field>
-      <textarea matInput name="ProblemDescription" placeholder="Omschrijving probleem"></textarea><br>
+      <textarea #problemdescription matInput name="ProblemDescription" placeholder="Omschrijving probleem"></textarea><br>
     </mat-form-field><br>
     <mat-checkbox>Spoed?</mat-checkbox><br>
       <div class="Overview"><br>
         <b>Overzicht:</b>
         <p>Categorie: <br> {{selected}}</p>
+        <b>Titel van uw ticket:</b>
+        <p>{{titleticket.value}}</p>
+        <b>Bezoekadres:</b>
+        <p>{{addressticket.value}}</p>
+        <b>Omschrijving van het probleem:</b>
+        <div id="problemdescription">
+        <p>{{problemdescription.value}}</p>
+        </div>
         <p>€0,00</p>
-          <button class="Confirm" type="submit">Bevestig</button>
+          <button (click)="openDialog()" class="Confirm" type="submit">Bevestig</button>
       </div>
     </div>
 </mat-card>
