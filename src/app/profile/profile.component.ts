@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CustomerData} from '../CustomerData';
 
 @Component({
   selector: 'app-profile',
