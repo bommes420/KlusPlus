@@ -6,45 +6,19 @@
 </mat-toolbar>
 
 <mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Tip #1: bijvullen radiator
-      </mat-panel-title>
-      <mat-panel-description>
-        Instructies voor het bijvullen van de radiator
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <p>Stap 1: Open de radiator</p>
-    <p>Stap 2: Vul de radiator bij</p>
-    <p>Stap 3: Zorg dat de radiator goed gesloten is</p>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Tip #2: repareren kapot raam
-      </mat-panel-title>
-      <mat-panel-description>
-        Instructies voor het zelf repareren van een raam(pje)
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <p>Stap 1: Zorg dat uw handen voldoende afgedekt maar bruikbaar zijn</p>
-    <p>Stap 2: Verwijder alle glasrestanten</p>
-    <p>Stap 3: Plaats het nieuwe glas</p>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Tip #3: Verstopping verhelpen
-      </mat-panel-title>
-      <mat-panel-description>
-        Instructies voor het eigenhandig verhelpen van een verstopping
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <p>Stap 1: Giet gootsteenontstopper in de gootsteen</p>
-    <p>Stap 2: Laat het inwerken</p>
-    <p>Stap 3: Controleer naderhand of de verstopping is opgelost en of er geen lekkages zijn</p>
-  </mat-expansion-panel>
+  <p *ngFor="let tip of DIYtips">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Tip #{{tip.ID}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{tip.tiptitle}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div *ngFor="let step of tip.tipcontent">
+      {{step}}
+      </div>
+    </mat-expansion-panel>
+  </p>
 </mat-accordion>

@@ -6,13 +6,15 @@
 </mat-toolbar>
 <br>
 <mat-card>
-<img class="profilepicture" src="../../assets/small_default_profile.png" mat-card-image>
+<img class="profilepicture" src="./assets/small_default_profile.png" mat-card-image>
   <br>
   <h2 class="details"><b>Gegevens</b></h2>
   <div class="customerdata">
-    <p>Naam: John Doe</p>
-    <p>Adres:Testlaan 14</p>
-    <p>Woonplaats: Friesland</p>
-    <p>Telefoonnummer: 06-12345678</p>
+    <div *ngFor="let customerdatas of customerdatas;">
+      <p>Naam: {{customerdatas.Naam}}</p>
+      <p>Adres: {{customerdatas.Adres}}</p>
+      <p>Woonplaats: {{customerdatas.Woonplaats}}</p>
+      <p>Telefoonnummer: {{customerdatas.Telefoonnummer}}</p>
+    </div>
   </div>
 </mat-card>

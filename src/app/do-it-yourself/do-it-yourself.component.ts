@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DIYtips} from '../DIYtips';
 
 @Component({
   selector: 'app-do-it-yourself',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./do-it-yourself.component.scss']
 })
 export class DoItYourselfComponent implements OnInit {
-
+  DIYtips = DIYtips;
   constructor() { }
 
   ngOnInit() {

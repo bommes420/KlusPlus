@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CustomerData} from '../CustomerData';
+import {customerdatas} from '../customerdatas';
 
 @Component({
   selector: 'app-profile',
@@ -7,7 +7,7 @@ import {CustomerData} from '../CustomerData';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
+  customerdatas = customerdatas;
   constructor() { }
 
   ngOnInit() {

@@ -2,6 +2,6 @@ export class CustomerData {
   Naam: string;
   Adres: string;
   Woonplaats: string;
-  Telefoonnummer: number;
+  Telefoonnummer: string;
 
 }

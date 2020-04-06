@@ -20,6 +20,8 @@ import { HomeComponent } from './home/home.component';
 import { RequestReparationComponent } from './request-reparation/request-reparation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DoItYourselfComponent } from './do-it-yourself/do-it-yourself.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // const appRoutes: Routes = [
 //   {path: 'File-request', component: 'appointmentsComponent'}
@@ -48,11 +50,13 @@ import { DoItYourselfComponent } from './do-it-yourself/do-it-yourself.component
     MatCheckboxModule,
     MatCardModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
   isShow = false;
 
